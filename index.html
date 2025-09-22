@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<!-- saved from url=(0043)https://domikvilla.github.io/predictor-lib/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jeffrey Program</title>
-  <link href="./assets/css2" rel="stylesheet">
+  <!-- Подключаем шрифт напрямую -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
@@ -189,12 +191,12 @@
       <label>Choose your game:</label>
       <div class="games">
         <label class="game-option">
-          <input type="radio" name="game" checked="">
-          <img src="./assets/aivtor_sitelogo.webp"> Aviator
+          <input type="radio" name="game" checked>
+          <img src="./assets/aivtor_sitelogo.webp" alt="Aviator"> Aviator
         </label>
         <label class="game-option">
           <input type="radio" name="game">
-          <img src="./assets/mines-content-logo.webp"> Mines
+          <img src="./assets/mines-content-logo.webp" alt="Mines"> Mines
         </label>
       </div>
 
@@ -202,7 +204,7 @@
       <input type="text" id="account" placeholder="e.g. 1234567890" maxlength="10">
       <div class="warning" id="warning">⚠️ Please enter a valid 10-digit account ID.</div>
 
-      <button class="btn" id="startBtn" type="button" onclick="showProgress()" disabled="">Start</button>
+      <button class="btn" id="startBtn" type="button" onclick="showProgress()" disabled>Start</button>
       <div class="progress-bar" id="progress" style="display:none;">
         <div class="progress-bar-fill"></div>
       </div>
@@ -230,7 +232,7 @@
       countdownEl.textContent = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
     }, 1000);
 
-    // Profit Calculator (×36 multiplier)
+    // Profit Calculator (×12 multiplier)
     document.getElementById("amount").addEventListener("input", function () {
       const val = parseFloat(this.value);
       const result = document.getElementById("result");
@@ -266,6 +268,5 @@
       }, 3000);
     }
   </script>
-
-
-</body></html>
+</body>
+</html>
